@@ -9,12 +9,13 @@
 
 def get_multiple():
     start_num = 2520
-    max_num = 21
+    min_num = 10
+    max_num = 20
     a = start_num
 
     while a >= start_num:
         z = []
-        for i in range(1, max_num):
+        for i in range(min_num, max_num):
             b = a % i
             if b != 0:
                 break
@@ -22,10 +23,9 @@ def get_multiple():
                 z.append(b)
                 continue
 
-        if z.count(0) != max_num-1:
+        if z.count(0) != max_num - min_num:
             a += 2520
         else:
             return a
 
 print(get_multiple())
-
