@@ -12,6 +12,18 @@ def multiply_factors(list, num):
     if product == num:
         print(list)
 
+def get_factors(num):
+    original_num = num
+    factors = []
+
+    while num > 0:
+        if original_num % num == 0:
+            factors.append(num)
+
+        num -= 1
+
+    return factors
+
 def check_prime_factors(num):
     factors_list = get_factors(num)
 
@@ -28,16 +40,4 @@ def check_prime_factors(num):
 
         multiply_factors(factors_subset, num)
 
-def get_factors(num):
-    original_num = num
-    factors = []
-
-    while num > 0:
-        if original_num % num == 0:
-            factors.append(num)
-
-        num -= 1
-
-    return factors
-
-check_prime_factors(501240)
+check_prime_factors(13195)
